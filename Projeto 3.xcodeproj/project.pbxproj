@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		862C5F59287F3F12006C3371 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862C5F58287F3F12006C3371 /* DetailsViewController.swift */; };
+		862C5F5B287F47E4006C3371 /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862C5F5A287F47E4006C3371 /* FeaturedViewController+UICollectionViewDelegate.swift */; };
 		8648FF2F287DEE4700D7AC3E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8648FF2E287DEE4700D7AC3E /* Movie.swift */; };
 		8648FF35287DF54D00D7AC3E /* Movie+Popular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8648FF30287DF54D00D7AC3E /* Movie+Popular.swift */; };
 		8648FF36287DF54D00D7AC3E /* Movie+Upcoming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8648FF31287DF54D00D7AC3E /* Movie+Upcoming.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		862C5F58287F3F12006C3371 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		862C5F5A287F47E4006C3371 /* FeaturedViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		8648FF2E287DEE4700D7AC3E /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		8648FF30287DF54D00D7AC3E /* Movie+Popular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+Popular.swift"; sourceTree = "<group>"; };
 		8648FF31287DF54D00D7AC3E /* Movie+Upcoming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+Upcoming.swift"; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 			children = (
 				864E58212874B3B8003F3614 /* FeaturedViewController.swift */,
 				8648FF3A287E145300D7AC3E /* FeaturedViewController+UICollectionViewDataSource.swift */,
+				862C5F58287F3F12006C3371 /* DetailsViewController.swift */,
+				862C5F5A287F47E4006C3371 /* FeaturedViewController+UICollectionViewDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				862C5F59287F3F12006C3371 /* DetailsViewController.swift in Sources */,
 				8648FF2F287DEE4700D7AC3E /* Movie.swift in Sources */,
 				8648FF37287DF54D00D7AC3E /* Movie+TrendingToday.swift in Sources */,
 				86626DA1287C98B100896BD3 /* UpcomingCollectionViewCell.swift in Sources */,
@@ -210,6 +217,7 @@
 				8648FF38287DF54D00D7AC3E /* Movie+NowPlaying.swift in Sources */,
 				864E58222874B3B8003F3614 /* FeaturedViewController.swift in Sources */,
 				864E581E2874B3B8003F3614 /* AppDelegate.swift in Sources */,
+				862C5F5B287F47E4006C3371 /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */,
 				8648FF39287DF54D00D7AC3E /* Movie+TrendingThisWeek.swift in Sources */,
 				8648FF36287DF54D00D7AC3E /* Movie+Upcoming.swift in Sources */,
 				864E58202874B3B8003F3614 /* SceneDelegate.swift in Sources */,

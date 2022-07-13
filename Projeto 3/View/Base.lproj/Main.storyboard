@@ -327,11 +327,29 @@
                     <connections>
                         <outlet property="nowPlayingCollectionView" destination="II8-e8-d99" id="26Q-jO-Yas"/>
                         <outlet property="popularCollectionView" destination="p7j-ed-Rpg" id="JDA-6W-reV"/>
+                        <segue destination="Y1d-ln-ZEj" kind="show" identifier="detailsSegue" id="yXS-HV-jjj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1073.913043478261" y="111.16071428571428"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="YKt-hb-pmX">
+            <objects>
+                <viewController id="Y1d-ln-ZEj" customClass="DetailsViewController" customModule="Projeto_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xFR-9e-Uam">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1241"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Qdd-e6-b3k"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="lvW-dJ-Ryc"/>
+                    <size key="freeformSize" width="414" height="1241"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ooL-iE-PuP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1753.6231884057972" y="111.49553571428571"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pVQ-1h-8vp">
