@@ -65,8 +65,8 @@
 			isa = PBXGroup;
 			children = (
 				8648FF2E287DEE4700D7AC3E /* Movie.swift */,
-				8648FF33287DF54D00D7AC3E /* Movie+NowPlaying.swift */,
 				8648FF30287DF54D00D7AC3E /* Movie+Popular.swift */,
+				8648FF33287DF54D00D7AC3E /* Movie+NowPlaying.swift */,
 				8648FF34287DF54D00D7AC3E /* Movie+TrendingThisWeek.swift */,
 				8648FF32287DF54D00D7AC3E /* Movie+TrendingToday.swift */,
 				8648FF31287DF54D00D7AC3E /* Movie+Upcoming.swift */,
@@ -95,8 +95,8 @@
 			children = (
 				864E581D2874B3B8003F3614 /* AppDelegate.swift */,
 				864E581F2874B3B8003F3614 /* SceneDelegate.swift */,
-				86626DA2287C997000896BD3 /* Controllers */,
 				8648FF2D287DEDF600D7AC3E /* Model */,
+				86626DA2287C997000896BD3 /* Controllers */,
 				865262F4287C9CD200E953C9 /* View */,
 				865262F5287C9E2900E953C9 /* SupportingFiles */,
 			);
