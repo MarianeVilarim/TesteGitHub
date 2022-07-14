@@ -17,7 +17,7 @@ class PopularCollectionViewCell: UICollectionViewCell {
     
     func setup(title: String, image: UIImage) {
         titleLabel.text = title
-        self.image.image = 
+        self.image.image = image
     }
     
 }

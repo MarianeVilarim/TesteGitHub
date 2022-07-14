@@ -36,10 +36,7 @@ extension FeaturedViewController: UICollectionViewDataSource {
             cell.setup(title: popularMovies[indexPath.item].title,
                        image: UIImage(named: popularMovies[indexPath.item].backdrop) ?? UIImage())
             
-            
-            cell.titleLabel.text = popularMovies[indexPath.item].title
-            cell.image.image = UIImage(named: popularMovies[indexPath.item].backdrop)
-            //celula da imagem
+           
             return cell
         }
         return PopularCollectionViewCell()
@@ -50,9 +47,9 @@ extension FeaturedViewController: UICollectionViewDataSource {
             
             let titulo: String = nowPlayingMovies[indexPath.item].title
             
-            cell.titleLabel.text = titulo
-            cell.dateLabel.text = "\(nowPlayingMovies[indexPath.item].releaseDate.prefix(4))"
-            cell.imageView.image = UIImage(named: nowPlayingMovies[indexPath.item].poster)
+            cell.setup (title: titulo, year: "\(nowPlayingMovies[indexPath.item].releaseDate.prefix(4))",
+                       image: UIImage(named: nowPlayingMovies[indexPath.item].poster) ?? UIImage())
+            
             
             return cell
         }
