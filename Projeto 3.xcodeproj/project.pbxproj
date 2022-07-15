@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86277BF52881E7DF00B224CB /* TMDB-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86277BF42881E7DF00B224CB /* TMDB-Info.plist */; };
+		86277BF72881ECA100B224CB /* Movie+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86277BF62881ECA100B224CB /* Movie+API.swift */; };
+		86277BF92881F8E000B224CB /* MoviesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86277BF82881F8E000B224CB /* MoviesResponse.swift */; };
 		862C5F59287F3F12006C3371 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862C5F58287F3F12006C3371 /* DetailsViewController.swift */; };
 		862C5F5B287F47E4006C3371 /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862C5F5A287F47E4006C3371 /* FeaturedViewController+UICollectionViewDelegate.swift */; };
 		8648FF2F287DEE4700D7AC3E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8648FF2E287DEE4700D7AC3E /* Movie.swift */; };
@@ -28,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		86277BF42881E7DF00B224CB /* TMDB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TMDB-Info.plist"; sourceTree = "<group>"; };
+		86277BF62881ECA100B224CB /* Movie+API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+API.swift"; sourceTree = "<group>"; };
+		86277BF82881F8E000B224CB /* MoviesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesResponse.swift; sourceTree = "<group>"; };
 		862C5F58287F3F12006C3371 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		862C5F5A287F47E4006C3371 /* FeaturedViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		8648FF2E287DEE4700D7AC3E /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
@@ -65,11 +71,13 @@
 			isa = PBXGroup;
 			children = (
 				8648FF2E287DEE4700D7AC3E /* Movie.swift */,
+				86277BF62881ECA100B224CB /* Movie+API.swift */,
 				8648FF30287DF54D00D7AC3E /* Movie+Popular.swift */,
 				8648FF33287DF54D00D7AC3E /* Movie+NowPlaying.swift */,
 				8648FF34287DF54D00D7AC3E /* Movie+TrendingThisWeek.swift */,
 				8648FF32287DF54D00D7AC3E /* Movie+TrendingToday.swift */,
 				8648FF31287DF54D00D7AC3E /* Movie+Upcoming.swift */,
+				86277BF82881F8E000B224CB /* MoviesResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,6 +128,7 @@
 			children = (
 				864E58262874B3BB003F3614 /* Assets.xcassets */,
 				864E582B2874B3BB003F3614 /* Info.plist */,
+				86277BF42881E7DF00B224CB /* TMDB-Info.plist */,
 			);
 			name = SupportingFiles;
 			sourceTree = "<group>";
@@ -194,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				864E582A2874B3BB003F3614 /* LaunchScreen.storyboard in Resources */,
+				86277BF52881E7DF00B224CB /* TMDB-Info.plist in Resources */,
 				864E58272874B3BB003F3614 /* Assets.xcassets in Resources */,
 				864E58252874B3B8003F3614 /* Main.storyboard in Resources */,
 			);
@@ -216,11 +226,13 @@
 				8648FF35287DF54D00D7AC3E /* Movie+Popular.swift in Sources */,
 				8648FF38287DF54D00D7AC3E /* Movie+NowPlaying.swift in Sources */,
 				864E58222874B3B8003F3614 /* FeaturedViewController.swift in Sources */,
+				86277BF92881F8E000B224CB /* MoviesResponse.swift in Sources */,
 				864E581E2874B3B8003F3614 /* AppDelegate.swift in Sources */,
 				862C5F5B287F47E4006C3371 /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */,
 				8648FF39287DF54D00D7AC3E /* Movie+TrendingThisWeek.swift in Sources */,
 				8648FF36287DF54D00D7AC3E /* Movie+Upcoming.swift in Sources */,
 				864E58202874B3B8003F3614 /* SceneDelegate.swift in Sources */,
+				86277BF72881ECA100B224CB /* Movie+API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -34,9 +34,15 @@ extension FeaturedViewController: UICollectionViewDataSource {
             //Reaproveitamento da celula e mudança para popular Collection View
             
             cell.setup(title: popularMovies[indexPath.item].title,
-                       image: UIImage(named: popularMovies[indexPath.item].backdrop) ?? UIImage())
+                       image: UIImage())
+            let movie = popularMovies[indexPath.item]
             
-           
+            Task {
+                let imageData = await Movie.downloadImageData(withPath: movie.backdropPath)
+                let imagem = UIImage(data: imageData) ?? UIImage()
+                cell.setup(title: movie.title, image: imagem)
+            }
+            
             return cell
         }
         return PopularCollectionViewCell()
@@ -48,7 +54,7 @@ extension FeaturedViewController: UICollectionViewDataSource {
             let titulo: String = nowPlayingMovies[indexPath.item].title
             
             cell.setup (title: titulo, year: "\(nowPlayingMovies[indexPath.item].releaseDate.prefix(4))",
-                       image: UIImage(named: nowPlayingMovies[indexPath.item].poster) ?? UIImage())
+                       image: UIImage(named: nowPlayingMovies[indexPath.item].posterPath) ?? UIImage())
             
             
             return cell
