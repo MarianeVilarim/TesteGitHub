@@ -48,6 +48,7 @@ extension Movie {
         
         do {
             let (data, response) = try await session.data(from: url)
+            return data
         }catch{
             print(error)
         }

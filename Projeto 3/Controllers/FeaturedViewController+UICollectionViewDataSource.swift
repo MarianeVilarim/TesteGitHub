@@ -13,7 +13,7 @@ extension FeaturedViewController: UICollectionViewDataSource {
         } else if collectionView == nowPlayingCollectionView {
             return nowPlayingMovies.count
         } else {
-            return 0
+            return upcomingMovies.count
         }
         
     }
@@ -23,8 +23,10 @@ extension FeaturedViewController: UICollectionViewDataSource {
             return makePopularCell(indexPath)
         } else if collectionView == nowPlayingCollectionView {
             return makeNowPlayingCell(indexPath)
+        } else {
+            return makeUpcomingCell(indexPath)
         }
-        return UICollectionViewCell()
+            
         //
     }
     
@@ -62,6 +64,29 @@ extension FeaturedViewController: UICollectionViewDataSource {
         return NowPlayingCollectionViewCell()
     }
     
+    fileprivate func makeUpcomingCell(_ indexPath: IndexPath) -> UpcomingCollectionViewCell {
+        if let cell = upcomingCollectionView.dequeueReusableCell(withReuseIdentifier: UpcomingCollectionViewCell.cellIdentifier, for: indexPath) as? UpcomingCollectionViewCell {
+            //Constante usado para reutilizar celulas e não ocupar tanto espaço no app
+            let titulo: String = upcomingMovies[indexPath.item].title
+            //Constante do título em string que chama os títulos dos filmes do upcoming e o indexPath.item serve para acessar cada título
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let date: Date? = dateFormatter.date(from: upcomingMovies[indexPath.item].releaseDate)
+            // Constante para ter acesso a data no formato disponibilizado pelo sistema
     
+            dateFormatter.dateFormat = "MMM dd"
+            let dataBonita = dateFormatter.string(from: date ?? Date())
+            // Transformando a data para um formato escolhido
+            
+            cell.setup (title: titulo, year: dataBonita,
+                       image: UIImage(named: upcomingMovies[indexPath.item].posterPath) ?? UIImage())
+            
+            //Comentário Geral: Parametros para ter acesso ao título do filme, data do filme e ao poster
+            
+            return cell
+        }
+        return UpcomingCollectionViewCell()
+    }
 }
 
