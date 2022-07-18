@@ -53,12 +53,13 @@ extension FeaturedViewController: UICollectionViewDataSource {
     fileprivate func makeNowPlayingCell(_ indexPath: IndexPath) -> NowPlayingCollectionViewCell {
         if let cell = nowPlayingCollectionView.dequeueReusableCell(withReuseIdentifier: NowPlayingCollectionViewCell.cellIdentifier, for: indexPath) as? NowPlayingCollectionViewCell {
             
-            let titulo: String = nowPlayingMovies[indexPath.item].title
+            let movie = nowPlayingMovies[indexPath.item]
             
-            cell.setup (title: titulo, year: "\(nowPlayingMovies[indexPath.item].releaseDate.prefix(4))",
-                       image: UIImage(named: nowPlayingMovies[indexPath.item].posterPath) ?? UIImage())
-            
-            
+            Task {
+                let imageData = await Movie.downloadImageData(withPath: movie.posterPath)
+                let imagem = UIImage(data: imageData) ?? UIImage()
+                cell.setup(title: movie.title, year: String(movie.releaseDate.prefix(4)), image: imagem)
+            }
             return cell
         }
         return NowPlayingCollectionViewCell()
@@ -83,6 +84,14 @@ extension FeaturedViewController: UICollectionViewDataSource {
                        image: UIImage(named: upcomingMovies[indexPath.item].posterPath) ?? UIImage())
             
             //Comentário Geral: Parametros para ter acesso ao título do filme, data do filme e ao poster
+            
+            let movie = upcomingMovies[indexPath.item]
+            
+            Task {
+                let imageData = await Movie.downloadImageData(withPath: movie.posterPath)
+                let imagem = UIImage(data: imageData) ?? UIImage()
+                cell.setup(title: movie.title, year: String(movie.releaseDate.prefix(4)), image: imagem)
+            }
             
             return cell
         }
