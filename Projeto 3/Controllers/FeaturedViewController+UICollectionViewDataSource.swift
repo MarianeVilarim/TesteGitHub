@@ -37,6 +37,7 @@ extension FeaturedViewController: UICollectionViewDataSource {
             
             cell.setup(title: popularMovies[indexPath.item].title,
                        image: UIImage())
+            
             let movie = popularMovies[indexPath.item]
             
             Task {
